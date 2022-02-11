@@ -1,52 +1,63 @@
 import React from "react";
 
 
-const Navbar =()=>{
+class Navbar extends React.Component {
+  state = { entry: "" };
 
- return (
-    <div className="App">
-      {/* <div><h1>RRVJP Tourism</h1></div> */}
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="/about">About</a>
+  onFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.entry);
+    // this.props.onSearchSubmit(this.state.entry);
+  };
 
-    <a className="navbar-brand" href="/home">Home</a>
+  render() {
+    return (
+      <div className="App">
+        {/* <div><h1>RRVJP Tourism</h1></div> */}
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="/about">About</a>
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/place_props">Places</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/contact">Contact Us</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Booking
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="/">Buses</a></li>
-            <li><a className="dropdown-item" href="/">Trains</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="/">Flights</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+            <a className="navbar-brand" href="/home">Home</a>
 
-      
-    </div>
-  );
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/place_props">Places</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/contact">Contact Us</a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Booking
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a className="dropdown-item" href="/">Buses</a></li>
+                    <li><a className="dropdown-item" href="/">Trains</a></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><a className="dropdown-item" href="/">Flights</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form className="d-flex" onSubmit={this.onFormSubmit}>
 
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e) => this.setState({ entry: e.target.value })}
+                  value={this.state.entry} />
+                <button className="btn btn-outline-success" type="submit">Search</button>
+
+              </form>
+            </div>
+          </div>
+        </nav>
+
+
+      </div>
+    );
+
+  }
 }
-
 export default Navbar

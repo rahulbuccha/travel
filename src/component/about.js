@@ -20,7 +20,7 @@ const About = () => {
         </p>
       </div>
 
-      <h2><ins>Our Team</ins></h2>
+      {/* <h2><ins>Our Team</ins></h2> */}
       <div class="row">
         <div class="column">
           <div class="card">
@@ -32,9 +32,9 @@ const About = () => {
               <h2>Rohit Gupta</h2>
               <p class="title">Founder</p>
               <p> Known for co-founding the online traveling website RRJVP.</p>
-              <p>rohitgpt12slp@gmail.com</p>
+              {/* <p>rohitgpt12slp@gmail.com</p> */}
               <p>
-                <button class="button">Contact</button>
+                <button class="button">Contact : rohit@gmail.com</button>
               </p>
             </div>
           </div>
@@ -50,9 +50,8 @@ const About = () => {
               <h2>Rahul Shaw</h2>
               <p class="title">CEO</p>
               <p>Known for co-founding the online traveling website RRJVP.</p>
-              <p>rahul@gmail.com</p>
               <p>
-                <button class="button">Contact</button>
+                <button class="button">Contact : rahul@gmail.com</button>
               </p>
             </div>
           </div>
@@ -68,10 +67,8 @@ const About = () => {
               <h2>Jatin Mangla</h2>
               <p class="title">CFO</p>
               <p>Known for co-founding the online traveling website RRJVP.</p>
-              <p>jatin@gmail.com</p>
-
               <p>
-                <button class="button">Contact</button>
+                <button class="button">Contact : jatin@gmail.com</button>
               </p>
             </div>
           </div>
@@ -86,9 +83,9 @@ const About = () => {
               <h2> Vipul Jaiswal </h2>
               <p class="title">COO</p>
               <p>Known for co-founding the online traveling website RRJVP.</p>
-              <p>Vipul@gmail.com</p>
+
               <p>
-                <button class="button">Contact</button>
+                <button class="button">Contact : Vipul@gmail.com </button>
               </p>
             </div>
           </div>
@@ -103,9 +100,9 @@ const About = () => {
               <h2>Pankaj Sah</h2>
               <p class="title">COO</p>
               <p>Known for co-founding the online traveling website RRJVP.</p>
-              <p>pankaj@gmail.com</p>
+
               <p>
-                <button class="button">Contact</button>
+                <button class="button">Contact : pankaj@gmail.com</button>
               </p>
             </div>
           </div>

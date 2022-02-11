@@ -8,8 +8,8 @@ import Contact from './component/contact';
 import About from './component/about';
 
 
-// import About from "./component/About";
-// import Contact from "./component/Contact";
+
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Placeprops from './component/place_props';
 import Signup from './component/signup';
@@ -30,6 +30,8 @@ function App() {
             <Route exact path="/place_props" element={<Placeprops />} />
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/login" element={<Login />} />
+
+
           </Routes>
         </div>
       </div>
