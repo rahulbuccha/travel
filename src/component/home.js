@@ -1,28 +1,45 @@
 import React from "react";
+import './home.css'
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-        <div
-      className="ui raised padded text container segment"
-      style={{ marginTop: "80px" }}>
+      <div
+        className="ui raised padded text container segment"
+        style={{ marginTop: "80px" }}>
 
-      <h3 className="ui header">Home</h3>
-      <h4>
-        RRJVP.com is an Indian online travel agency and travel search engine. It
-        is based in New Delhi, Haryana. It was founded by Rohit, Rahul
-        Jatin,Vipul and Pankaj in Feb 2022.
-      </h4>
-      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_960_720.jpg" style={{"width" : "70%"}}></img>
-      <div>
-         <h2> Login or Signup to continue</h2>
+        <h3 className="ui header">Home</h3>
+        <div className="text">
+          Book Flights, Hotels, Trains, Buses, Cruise and Holiday Packages
+          On Yatra.com, you can tailor your trip from end-to-end by scouring suitable
+          flights and making your flight booking before proceeding with your hotel bookings.
+          Yatra vast hotel repository will see you through this process seamlessly.
+          Any intervening journey can be conveniently planned by searching up relevant
+          train connectivity and making an IRCTC ticket booking. Look up well-researched
+          holiday packages, sift through cruise packages and finalise your entire trip on just one platform.
+        </div>
+
+        <div>
+          <h2> Login or Signup to continue</h2>
+        </div>
       </div>
-    </div>
-    <div>
-        <button type="button" class="btn btn-primary">Signup</button>&nbsp;&nbsp;&nbsp;
-        <button type="button" class="btn btn-primary">SignIn</button>
+      <div>
+
+        <Link to="/signup">
+          <button type="button" class="btn btn-danger">
+            Signup
+          </button>
+        </Link>&nbsp;&nbsp;&nbsp;
+        <Link to="/login">
+          <button type="button" class="btn btn-danger">
+            Login
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 export default Home;
+

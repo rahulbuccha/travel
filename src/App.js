@@ -12,6 +12,10 @@ import About from './component/about';
 // import Contact from "./component/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Placeprops from './component/place_props';
+import Signup from './component/signup';
+import Login from './component/login';
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +28,8 @@ function App() {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/place_props" element={<Placeprops />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/login" element={<Login />} />
           </Routes>
         </div>
       </div>

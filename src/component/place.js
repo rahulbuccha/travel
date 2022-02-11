@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 
-// import './card-style.css'
+import './place.css'
 
 
 

@@ -5,8 +5,8 @@ const Navbar =()=>{
 
  return (
     <div className="App">
-      <div><h1>RRVJP Tourism</h1></div>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {/* <div><h1>RRVJP Tourism</h1></div> */}
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="/about">About</a>
 
