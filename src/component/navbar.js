@@ -1,15 +1,5 @@
 import React from "react";
-
-
 class Navbar extends React.Component {
-  state = { entry: "" };
-
-  onFormSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state.entry);
-    // this.props.onSearchSubmit(this.state.entry);
-  };
-
   render() {
     return (
       <div className="App">
@@ -45,8 +35,7 @@ class Navbar extends React.Component {
               </ul>
               <form className="d-flex" onSubmit={this.onFormSubmit}>
 
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e) => this.setState({ entry: e.target.value })}
-                  value={this.state.entry} />
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-outline-success" type="submit">Search</button>
 
               </form>

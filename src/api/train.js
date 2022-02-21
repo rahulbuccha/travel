@@ -13,10 +13,16 @@ class Train extends React.Component {
         console.log("hello");
         const response = await axios.get(
             `https://pixabay.com/api/?key=25621304-ef4aeb9e1afa7178d28b0f842&q=${entry}&image_type=photo`
-        )
+        ).then((res)=>{
+            console.log("data",res)
+        }).catch((ex)=>{
+            console.log("error", ex)
+        })
+        
         this.setState({ Image: response.data.hits });
 
     };
+    
 
     render() {
         return (
